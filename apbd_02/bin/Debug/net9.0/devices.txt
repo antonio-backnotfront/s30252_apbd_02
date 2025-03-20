@@ -1,0 +1,3 @@
+Smartwatch [ID: 1, Name: Apple Watch, Battery: 40%, On: True]
+PC [ID: 2, Name: Gaming PC, OS: Windows 11, On: True]
+Embedded Device [ID: 3, Name: IoT Hub, IP: 192.168.1.1, Network: MD Ltd. IoT, On: True]

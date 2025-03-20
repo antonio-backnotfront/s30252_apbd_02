@@ -1,0 +1,14 @@
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/bin/Debug/net9.0/apbd_02
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/bin/Debug/net9.0/apbd_02.deps.json
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/bin/Debug/net9.0/apbd_02.runtimeconfig.json
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/bin/Debug/net9.0/apbd_02.dll
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/bin/Debug/net9.0/apbd_02.pdb
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/obj/Debug/net9.0/apbd_02.GeneratedMSBuildEditorConfig.editorconfig
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/obj/Debug/net9.0/apbd_02.AssemblyInfoInputs.cache
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/obj/Debug/net9.0/apbd_02.AssemblyInfo.cs
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/obj/Debug/net9.0/apbd_02.csproj.CoreCompileInputs.cache
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/obj/Debug/net9.0/apbd_02.dll
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/obj/Debug/net9.0/refint/apbd_02.dll
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/obj/Debug/net9.0/apbd_02.pdb
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/obj/Debug/net9.0/apbd_02.genruntimeconfig.cache
+/Users/solianyk/Desktop/cs/apbd/apbd_02/apbd_02/obj/Debug/net9.0/ref/apbd_02.dll
