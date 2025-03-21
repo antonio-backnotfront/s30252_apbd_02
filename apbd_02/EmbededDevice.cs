@@ -6,18 +6,18 @@ namespace apbd_02;
 
 class EmbeddedDevice : Device
 {
-    private  string IpAddress;
-    public string IPAddress
+    private  string _ipAddress;
+    public string IpAddress
     {
-        get => IpAddress;
+        get => _ipAddress;
         set
         {
             if (!Regex.IsMatch(value, "^\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b$"))
                 throw new ArgumentException("Invalid IP Address format.");
-            IpAddress = value;
+            _ipAddress = value;
         }
     }
-    public string NetworkName { get; set; }
+    public required string NetworkName { get; set; }
 
     public void Connect()
     {
@@ -30,6 +30,6 @@ class EmbeddedDevice : Device
         Connect();
         IsTurnedOn = true;
     }
-    public override string ToString() => $"Embedded Device [ID: {Id}, Name: {Name}, IP: {IPAddress}, Network: {NetworkName}, On: {IsTurnedOn}]";
+    public override string ToString() => $"Embedded Device [ID: {Id}, Name: {Name}, IP: {IpAddress}, Network: {NetworkName}, On: {IsTurnedOn}]";
 }
 
