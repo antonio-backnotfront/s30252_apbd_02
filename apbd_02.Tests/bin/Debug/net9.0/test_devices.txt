@@ -1,0 +1,3 @@
+SW-1,Apple Watch,true,90%
+ED-1,Pi,NotAnIP,MD Ltd. WiFi
+P-1,MyPC,false

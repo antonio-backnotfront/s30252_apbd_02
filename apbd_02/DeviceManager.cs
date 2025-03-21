@@ -50,7 +50,7 @@ class DeviceManager
                         BatteryPercentage = int.Parse(parts[3].TrimEnd('%'))
                     };
                 }
-                else if (typePrefix.StartsWith("P") && parts.Length >= 3)
+                else if (typePrefix.StartsWith("P") && parts.Length > 3)
                 {
                     device = new PersonalComputer
                     {
