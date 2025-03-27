@@ -5,6 +5,7 @@ using Xunit;
 using apbd_02;
 using System.Collections.Generic;
 
+
 namespace DeviceManagerTests
 {
     public class DeviceManagerUnitTests
