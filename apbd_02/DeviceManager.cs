@@ -131,7 +131,7 @@ class DeviceManager
     /// <param name="isTurnedOn"></param>
     public void EditDeviceData(int id, int newId, string name, bool isTurnedOn){
         devices.First(i => i.Id == id).Id = newId;
-        devices.First(i => i.Id == id).Name = name;
-        devices.First(i => i.Id == id).IsTurnedOn = isTurnedOn;
+        devices.First(i => i.Id == newId).Name = name;
+        devices.First(i => i.Id == newId).IsTurnedOn = isTurnedOn;
     }
 }

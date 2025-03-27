@@ -10,6 +10,7 @@ class Program
             Console.WriteLine("Connecting...");
             manager.ShowDevices();
             manager.EditDeviceData(1,100,"Apple",true);
+            manager.ShowDevices();
             manager.SaveDevices();
         }
         catch (Exception ex) { Console.WriteLine(ex.Message); }
