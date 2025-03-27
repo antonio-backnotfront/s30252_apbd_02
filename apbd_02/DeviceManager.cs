@@ -17,74 +17,30 @@ class DeviceManager
 
     private void LoadDevices()
     {
-        
-       
-        
-        
-        if (!File.Exists(filePath)) 
-        {
-            return;
-        }
-        // string[] lines = File.ReadAllLines(filePath);
+        if (!File.Exists(filePath)) return;
+
         foreach (var line in File.ReadAllLines(filePath, System.Text.Encoding.UTF8))
         {
-            // Console.WriteLine(line);
             if (devices.Count >= MaxDevices)
             {
-                Console.WriteLine("Exceeding max devices");
+                // Console.WriteLine("Exceeding max devices");
                 return;
             }
-            
-            
-            try
-            {
-                Device device;
-                var parts = line.Split(',');
-                if (parts.Length < 3) continue;
-                string typePrefix = parts[0].Split('-')[0];
 
-                if (typePrefix.StartsWith("SW") && parts.Length >= 4)
-                {
-                    device = new Smartwatch
-                    {
-                        Id = devices.Count+1,
-                        Name = parts[1],
-                        IsTurnedOn = parts[2].ToLower() == "true",
-                        BatteryPercentage = int.Parse(parts[3].TrimEnd('%'))
-                    };
-                }
-                else if (typePrefix.StartsWith("P") && parts.Length > 3)
-                {
-                    device = new PersonalComputer
-                    {
-                        Id = devices.Count+1,
-                        Name = parts[1],
-                        IsTurnedOn = parts[2].ToLower() == "true",
-                        OperatingSystem = parts.Length > 3 ? parts[3] : null
-                    };
-                }
-                else if (typePrefix.StartsWith("ED") && parts.Length >= 4 && parts[3].Contains("MD Ltd."))
-                {
-                    device = new EmbeddedDevice
-                    {
-                        Id = devices.Count+1,
-                        Name = parts[1],
-                        IpAddress = parts[2],
-                        NetworkName = parts[3]
-                    };
-                    
-                }
-                else
-                {
-                    Console.WriteLine("Skipped invalid or unknown device type line: " + line);
-                    continue;
-                }
-                Console.WriteLine(device);
-                devices.Add(device);
+            var device = DeviceFactory.CreateDevice(line, devices.Count + 1);
+
+            if (device == null)
+            {
+                // Console.WriteLine("Skipped invalid or unknown device type line: " + line);
+                continue;
             }
-            catch (Exception e){Console.WriteLine(e.Message); }
+
+            devices.Add(device);
+            // Console.WriteLine(device);
         }
     }
+
+    
     /// <summary>
     /// Add device to a device manager
     /// </summary>
