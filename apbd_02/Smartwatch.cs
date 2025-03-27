@@ -15,8 +15,13 @@ class Smartwatch : Device, IPowerNotifier
         }
     }
 
+    /// <summary>
+    /// Print the information about the low battery
+    /// </summary>
     public void NotifyLowBattery() => Console.WriteLine("Warning: Battery below 20%!");
 
+    
+    
     public override void TurnOn()
     {
         if (BatteryPercentage < 11)

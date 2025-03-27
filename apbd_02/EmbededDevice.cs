@@ -6,7 +6,7 @@ namespace apbd_02;
 
 class EmbeddedDevice : Device
 {
-    private  string _ipAddress;
+    private string _ipAddress;
     public string IpAddress
     {
         get => _ipAddress;
@@ -19,6 +19,7 @@ class EmbeddedDevice : Device
     }
     public required string NetworkName { get; set; }
 
+        
     public void Connect()
     {
         if (!NetworkName.Contains("MD Ltd."))
